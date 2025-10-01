@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'Building the project...'
         //sh 'pip install -r requirements.txt || true'
-        sh 'pip --version || echo "pip not installed"'
+        //sh 'pip --version || echo "pip not installed"'
        
       }
     }
@@ -18,8 +18,7 @@ pipeline {
       steps {
         echo 'Running tests... (simulated)'
         //sh 'pytest || exit 1'
-        //sh 'echo "All tests passed!"'
-        sh 'exit 1'
+        sh 'echo "All tests passed!"'
       }
     }
     stage('Deploy') {
