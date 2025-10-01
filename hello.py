@@ -1,3 +1,4 @@
 print('hello from project')
 print('I love coffee')
-init
+def greet():
+    return "Hello, World!

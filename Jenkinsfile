@@ -9,17 +9,20 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building the project...'
-        sh 'echo "Compiling source code..."'
+        sh 'pip install -r requirements.txt || true'
+       
       }
     }
     stage('Test') {
       steps {
         echo 'Running tests... (simulated)'
+        sh 'pytest || exit 1'
       }
     }
     stage('Deploy') {
       steps {
         echo 'Deploying... (simulated)'
+        sh 'echo "Application deployed successfully!"'
       }
     }
   }
