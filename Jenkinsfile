@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building the project...'
-        sh 'echo Hello from Jenkins build'
+        sh 'echo "Compiling source code..."'
       }
     }
     stage('Test') {
