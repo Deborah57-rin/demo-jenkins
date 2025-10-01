@@ -1,18 +1,26 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') { steps { checkout scm } }
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
     stage('Build') {
       steps {
-        echo 'Build: show files'
-        sh 'ls -la'
+        echo 'Building the project...'
+        sh 'echo Hello from Jenkins build'
       }
     }
     stage('Test') {
       steps {
-        echo 'No tests for demo — replace with real test commands'
+        echo 'Running tests... (simulated)'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying... (simulated)'
       }
     }
   }
-  post { always { archiveArtifacts artifacts: '**/*', fingerprint: true } }
 }
