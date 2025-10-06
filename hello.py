@@ -1,5 +1,5 @@
 print('hello from project')
-print('I love coffee')
+print('I love swimming')
 
 def greet():
     return "Hello, World!"
