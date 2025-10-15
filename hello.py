@@ -1,4 +1,4 @@
-print('hello from project')
+print('hello from Jane!')
 print('I love hockey')
 print('SFE 4080')
 
